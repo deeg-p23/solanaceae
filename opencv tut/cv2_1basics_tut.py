@@ -1,7 +1,7 @@
 import cv2 # OpenCV
 import random # Random
 
-img = cv2.imread('png test-assets/sponge.jpg', 1) # reading sponge.jpg in grayscale 
+img = cv2.imread('C:/Users/brian/OneDrive/Desktop/hardhacks/solanaceae/solanaceae/opencv tut/png test-assets/sponge.jpg', 1) # reading sponge.jpg in grayscale 
 # NOTE: CV2 READS COLOR IMAGES IN BGR CHANNEL ORDER
 # THE FOLLOWING ARE ALL IMREAD MODES
 # -1 : cv2.IMREAD_COLOR : loads color, transparency of image neglected, default flag
