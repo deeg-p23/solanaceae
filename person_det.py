@@ -20,7 +20,7 @@ fullbody_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_fu
 # object_model.setInputScale((127.5, 127,5,127.5))
 # object_model.setInputSwapRB(True)
 
-object_font_scale = 3
+object_font_scale = 2
 object_font = cv2.FONT_HERSHEY_PLAIN
 
 face_drawn = False
@@ -41,22 +41,26 @@ while True:
     fullbody = fullbody_cascade.detectMultiScale(gray_frame,1.15,5)
 
     for (x, y, a, b) in faces:
-        cv2.rectangle(frame, (x, y), (x + a, y + b), (0, 0, 255), 5)
+        cv2.rectangle(frame, (x, y + 10), (x + a, y + b), (0, 0, 255), 2)
+        cv2.putText(frame, 'face', (x, y), object_font, object_font_scale, (0, 0, 255), 2, cv2.LINE_AA)
         face_drawn = True
-        
-     
+    
+    
     for (x, y, a, b) in rightface:
         if not face_drawn:
-            cv2.rectangle(frame, (x, y), (x + a, y + b), (0, 0, 255), 5)
-       
+            cv2.putText(frame, 'face', (x, y + 25), object_font, object_font_scale, (0, 0, 255), 2, cv2.LINE_AA)
+            cv2.rectangle(frame, (x, y), (x + a, y + b), (0, 0, 255), 2)
+    
 
     for (x, y, a, b) in leftface:
         if not face_drawn:
-            cv2.rectangle(frame, (width - x,y), (width - (x + a), y + b), (0, 0, 255), 5)
-       
-       
+            cv2.putText(frame, 'face', (width, y + 25), object_font, object_font_scale, (0, 0, 255), 2, cv2.LINE_AA)
+            cv2.rectangle(frame, (width - x,y), (width - (x + a), y + b), (0, 0, 255), 2)
+    
+    
     for (x, y, a, b) in fullbody:
-        cv2.rectangle(frame, (x, y), (x + a, y + b), (0, 0, 255), 5)
+        cv2.putText(frame, 'human', (x, y + 25), object_font, object_font_scale, (255, 0, 0), 2, cv2.LINE_AA)
+        cv2.rectangle(frame, (x, y), (x + a, y + b), (255, 0, 0), 2)
         
     cv2.imshow('frame', frame)
 
