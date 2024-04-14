@@ -1,0 +1,38 @@
+<annotation>
+	<folder>train</folder>
+	<filename>20240413_195523.jpg</filename>
+	<path>C:\Users\brian\OneDrive\Desktop\hardhacks\solanaceae\solanaceae\obj_det models\train\20240413_195523.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3024</width>
+		<height>4032</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>ruler</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1322</xmin>
+			<ymin>1037</ymin>
+			<xmax>2622</xmax>
+			<ymax>2133</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>phone</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>357</xmin>
+			<ymin>2733</ymin>
+			<xmax>752</xmax>
+			<ymax>3498</ymax>
+		</bndbox>
+	</object>
+</annotation>
